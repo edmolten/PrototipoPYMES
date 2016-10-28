@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:title="Alertas"
+            android:icon="@drawable/ic_warning_black_24px"
+            >
+            <menu>
+                <item
+                    android:id="@+id/alertas_productos"
+                    android:icon="@drawable/ic_business_center_black_24px"
+                    android:title="Por productos" />
+                <item
+                    android:id="@+id/alertas_clientes"
+                    android:icon="@drawable/ic_people_black_24px"
+                    android:title="Por clientes" />
+            </menu>
+        </item>
+        <item
+            android:id="@+id/competencia"
+            android:icon="@drawable/ic_whatshot_black_24px"
+            android:title="Competencia" />
+        <item
+            android:id="@+id/rentabilidad"
+            android:icon="@drawable/ic_poll_black_24px"
+            android:title="Rentabilidad" />
+        <item
+            android:id="@+id/externo"
+            android:icon="@drawable/ic_public_black_24px"
+            android:title="Externo" />
+    </group>
+
+</menu>
