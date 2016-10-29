@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_producto"
+    android:layout_gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:text="Nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nombre"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:elevation="0dp"
+            android:layout_centerInParent="false"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_centerVertical="false"
+            android:layout_alignParentStart="false"
+            android:layout_centerHorizontal="false"
+            android:layout_marginRight="6dp" />
+
+        <TextView
+            android:text="$comp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/p_comp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:layout_marginRight="12dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_centerVertical="false"
+            android:layout_toStartOf="@+id/p_mi"
+            android:layout_below="@+id/nombre" />
+
+        <TextView
+            android:text="%"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pcent"
+            android:layout_below="@+id/nombre"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:text="$mi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/p_mi"
+            android:layout_marginRight="12dp"
+            android:layout_toStartOf="@+id/pcent"
+            android:layout_below="@+id/nombre" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

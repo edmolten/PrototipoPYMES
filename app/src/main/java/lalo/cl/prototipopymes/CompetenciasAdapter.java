@@ -1,5 +1,6 @@
 package lalo.cl.prototipopymes;
 
+import android.content.Intent;
 import android.database.DataSetObserver;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 
 public class CompetenciasAdapter implements ListAdapter {
 
-    ArrayList<Competencia> competencias;
+    public static ArrayList<Competencia> competencias;
     AppCompatActivity activity;
 
     public CompetenciasAdapter(AppCompatActivity activity) {
@@ -70,12 +71,20 @@ public class CompetenciasAdapter implements ListAdapter {
         TextView rubro = (TextView) vistaCompetencia.findViewById(R.id.rubro);
         TextView km = (TextView) vistaCompetencia.findViewById(R.id.km);
 
-        Competencia competencia = competencias.get(position);
+        final Competencia competencia = competencias.get(position);
         imagen.setImageDrawable(ContextCompat.getDrawable(activity, competencia.getDrawable()));
         nombre.setText(competencia.getNombre());
         rubro.setText(competencia.getRubro());
-        km.setText(String.format("A %f km.", competencia.getKm()));
-
+        km.setText(String.format("A %s", competencia.getKm()));
+        vistaCompetencia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i;
+                i = new Intent(activity, DetalleCompetenciaActivity.class);
+                i.putExtra("index", competencias.indexOf(competencia));
+                activity.startActivity(i);
+            }
+        });
         return vistaCompetencia;
     }
 

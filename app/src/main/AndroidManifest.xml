@@ -36,7 +36,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="lalo.cl.prototipopymes.MainActivity" />
         </activity>
-        <activity android:name=".CompetenciasActivity"></activity>
+        <activity
+            android:name=".CompetenciasActivity"
+            android:label="Competencia">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lalo.cl.prototipopymes.MainActivity" />
+        </activity>
+        <activity android:name=".DetalleCompetenciaActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lalo.cl.prototipopymes.CompetenciasActivity" />
+        </activity>
     </application>
 
 </manifest>
