@@ -27,7 +27,7 @@
         android:id="@+id/p_comp_id"
         android:layout_alignParentTop="true"
         android:layout_toStartOf="@+id/p_mi_text"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimary"
         android:layout_marginRight="12dp"
         android:paddingRight="12dp" />
 
