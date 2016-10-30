@@ -1,7 +1,7 @@
 package lalo.cl.prototipopymes;
 
 import android.database.DataSetObserver;
-import android.graphics.Color;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +14,10 @@ public class ProductosAdapter implements ListAdapter {
 
     ArrayList<Producto> productos;
     AppCompatActivity activity;
+    public Fragment fragment;
 
     public ProductosAdapter(AppCompatActivity activity, Competencia thisCompetencia) {
-        productos = thisCompetencia.getProductos();
+        if(thisCompetencia != null) productos = thisCompetencia.getProductos();
         this.activity = activity;
     }
 
@@ -75,10 +76,10 @@ public class ProductosAdapter implements ListAdapter {
         p_mi.setText("$ " + String.valueOf(pMi));
         p_comp.setText("$" + String.valueOf(pComp));
         if (pMi > pComp) {
-            pcent.setText(String.format("%%%.1f mas caro", 100*((pMi-pComp)/pComp)));
+            pcent.setText(String.format("%%%.1f mas caro", 100 * ((pMi - pComp) / pComp)));
             pcent.setTextColor(activity.getResources().getColor(R.color.red));
         } else if (pMi < pComp) {
-            pcent.setText(String.format("%%%.1f mas barato", 100*((pComp-pMi) / pMi)));
+            pcent.setText(String.format("%%%.1f mas barato", 100 * ((pComp - pMi) / pMi)));
             pcent.setTextColor(activity.getResources().getColor(R.color.green));
         } else {
             pcent.setText("Mismo precio");

@@ -4,10 +4,11 @@ package lalo.cl.prototipopymes;
 public class Producto {
 
     static int ids = 0;
-    private final int id;
-    private final String nombre;
-    private final int pMi;
-    private final int pComp;
+    private int id;
+    private String nombre;
+    private int pMi;
+    private int pComp;
+    private String pcent;
 
     Producto(String nombre, int pMi, int pComp) {
         this.nombre = nombre;
@@ -15,6 +16,11 @@ public class Producto {
         this.pComp = pComp;
         this.id = ids;
         ids++;
+    }
+
+    Producto(String nombre, String pcent) {
+        this.nombre = nombre;
+        this.pcent = pcent;
     }
 
     public int getId() {
@@ -33,5 +39,8 @@ public class Producto {
         return pComp;
     }
 
+    public String getPcent() {
+        return pcent;
+    }
 }
 

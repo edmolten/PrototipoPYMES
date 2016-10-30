@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.competencia) {
             startActivity(new Intent(this, CompetenciasActivity.class));
         } else if (id == R.id.rentabilidad) {
-
+            startActivity(new Intent(this, RentabilidadActivity.class));
         } else if (id == R.id.externo) {
 
         }
