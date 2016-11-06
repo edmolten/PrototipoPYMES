@@ -23,7 +23,7 @@ public class ProductosIgualFragment extends Fragment {
         productos.add(new Producto("Berlines", "+ 0.1%"));
         productos.add(new Producto("Medias Luneas", "- 0.8%"));
 
-        adapter = new ProductosAlertasAdapter(inflater, productos,this);
+        adapter = new ProductosAlertasAdapter(inflater, productos, this);
         View view = inflater.inflate(R.layout.fragment_productos_igual, container, false);
         ListView list = (ListView) view.findViewById(R.id.list);
         list.setAdapter(adapter);

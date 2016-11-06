@@ -30,10 +30,9 @@ public class ProductosAlertasAdapter extends ProductosAdapter {
         String pcentText = producto.getPcent();
         char sign = pcentText.charAt(0);
         int color;
-        if(fragment instanceof ProductosIgualFragment){
+        if (fragment instanceof ProductosIgualFragment) {
             color = R.color.yellow;
-        }
-        else {
+        } else {
             if (sign == '+') {
                 color = R.color.green;
 

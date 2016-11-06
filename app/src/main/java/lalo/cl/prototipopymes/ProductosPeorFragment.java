@@ -28,7 +28,7 @@ public class ProductosPeorFragment extends Fragment {
         productos.add(new Producto("Galleta chica", "- 1%"));
         productos.add(new Producto("Helado", "- 2%"));
 
-        adapter = new ProductosAlertasAdapter(inflater, productos,this);
+        adapter = new ProductosAlertasAdapter(inflater, productos, this);
         View view = inflater.inflate(R.layout.fragment_productos_peor, container, false);
         ListView list = (ListView) view.findViewById(R.id.list);
         list.setAdapter(adapter);

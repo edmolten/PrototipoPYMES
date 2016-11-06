@@ -12,12 +12,12 @@ import java.util.ArrayList;
 
 public class ProductosAdapter implements ListAdapter {
 
+    public Fragment fragment;
     ArrayList<Producto> productos;
     AppCompatActivity activity;
-    public Fragment fragment;
 
     public ProductosAdapter(AppCompatActivity activity, Competencia thisCompetencia) {
-        if(thisCompetencia != null) productos = thisCompetencia.getProductos();
+        if (thisCompetencia != null) productos = thisCompetencia.getProductos();
         this.activity = activity;
     }
 
