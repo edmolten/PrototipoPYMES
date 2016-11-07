@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.externo) {
             startActivity(new Intent(this, ExternosActivity.class));
         } else if (id == R.id.calendario) {
-            //startActivity(new Intent(this, CompetenciasActivity.class));
+            startActivity(new Intent(this, CalendarioActivity.class));
         } else if (id == R.id.contactos) {
             //startActivity(new Intent(this, InternosActivity.class));
         }
