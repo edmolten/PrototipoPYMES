@@ -1,27 +1,33 @@
 package lalo.cl.prototipopymes;
 
 import android.database.DataSetObserver;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.LayoutInflater;
 import android.widget.ListAdapter;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class IndicadoresAdapter implements ListAdapter {
+public abstract class IndicadoresAdapter implements ListAdapter {
 
-    static ArrayList<Indicador> indicadores;
+    static ArrayList<Indicador> indicadoresIniciales;
+    static ArrayList<Indicador> otrosIndicadores;
 
     static {
-        indicadores = new ArrayList<>();
-
+        indicadoresIniciales = new ArrayList<>();
+        otrosIndicadores = new ArrayList<>();
+        indicadoresIniciales.add(new Indicador("IPC", "4.6 %"));
+        indicadoresIniciales.add(new Indicador("Dolar", "$ 649"));
+        indicadoresIniciales.add(new Indicador("UTM", "$ 46.091"));
+        otrosIndicadores.add(new Indicador("UF", "$ 26.276,75"));
+        otrosIndicadores.add(new Indicador("Sueldo Mínimo", "$ 257.500"));
+        otrosIndicadores.add(new Indicador("% Economía nacional", "3.2 %"));
+        otrosIndicadores.add(new Indicador("% Cesantía", "6.8 %"));
     }
 
-    AppCompatActivity activity;
+    LayoutInflater inflater;
+    ArrayList<Indicador> indicadores;
 
-    public IndicadoresAdapter(AppCompatActivity activity) {
-        this.activity = activity;
+    public IndicadoresAdapter(LayoutInflater inflater) {
+        this.inflater = inflater;
     }
 
     @Override
@@ -64,17 +70,6 @@ public class IndicadoresAdapter implements ListAdapter {
         return false;
     }
 
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        View vistaIndicador = activity.getLayoutInflater().inflate(R.layout.view_externo, null);
-        TextView nombre = (TextView) vistaIndicador.findViewById(R.id.nombre);
-        TextView valor = (TextView) vistaIndicador.findViewById(R.id.valor);
-
-        Indicador indicador = indicadores.get(position);
-        nombre.setText(indicador.getNombre());
-        valor.setText(indicador.getValor());
-        return vistaIndicador;
-    }
 
     @Override
     public int getItemViewType(int position) {

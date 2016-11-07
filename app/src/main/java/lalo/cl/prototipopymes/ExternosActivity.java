@@ -1,17 +1,19 @@
 package lalo.cl.prototipopymes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
 
 public class ExternosActivity extends AppCompatActivity {
 
-    IndicadoresAdapter adapter;
-    ListView indicadoresList;
+    private FloatingActionButton fab;
+    private ListView listView;
+    private IndicadoresInicialesAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,20 +21,25 @@ public class ExternosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_externos);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        final AppCompatActivity activity = this;
+        this.fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View v) {
+                activity.startActivityForResult(new Intent(activity,AgregarExternosActivity.class),0);
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        indicadoresList = (ListView) findViewById(R.id.list);
-        adapter = new IndicadoresAdapter(this);
-        indicadoresList.setAdapter(adapter);
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        listView.setAdapter(adapter);
+    }
+
+    public void setListAndAdapter(IndicadoresInicialesAdapter adapter, ListView listView) {
+        this.listView = listView;
+        this.adapter = adapter;
+    }
 }
