@@ -6,27 +6,22 @@ import android.widget.ListAdapter;
 
 import java.util.ArrayList;
 
-public abstract class IndicadoresAdapter implements ListAdapter {
+public abstract class GubernamentalesAdapter implements ListAdapter {
 
-    static ArrayList<Indicador> indicadoresIniciales;
-    static ArrayList<Indicador> otrosIndicadores;
+    static ArrayList<Gubernamental> gubernamentalesIniciales;
+    static ArrayList<Gubernamental> otrosGubernamentales;
 
     static {
-        indicadoresIniciales = new ArrayList<>();
-        otrosIndicadores = new ArrayList<>();
-        indicadoresIniciales.add(new Indicador("IPC", "4.6 %"));
-        indicadoresIniciales.add(new Indicador("Dolar", "$ 649"));
-        indicadoresIniciales.add(new Indicador("UTM", "$ 46.091"));
-        otrosIndicadores.add(new Indicador("UF", "$ 26.276,75"));
-        otrosIndicadores.add(new Indicador("Sueldo Mínimo", "$ 257.500"));
-        otrosIndicadores.add(new Indicador("% Economía nacional", "3.2 %"));
-        otrosIndicadores.add(new Indicador("% Cesantía", "6.8 %"));
+        gubernamentalesIniciales = new ArrayList<>();
+        otrosGubernamentales = new ArrayList<>();
+        gubernamentalesIniciales.add(new Gubernamental("Municipalidad", "347654576", "www.municipalidad.cl"));
+        otrosGubernamentales.add(new Gubernamental("SEREMI", "65872464", "www.gobierno.cl"));
     }
 
     LayoutInflater inflater;
-    ArrayList<Indicador> gubernamentales;
+    ArrayList<Gubernamental> gubernamentales;
 
-    public IndicadoresAdapter(LayoutInflater inflater) {
+    public GubernamentalesAdapter(LayoutInflater inflater) {
         this.inflater = inflater;
     }
 

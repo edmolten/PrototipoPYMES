@@ -20,13 +20,11 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
@@ -41,7 +39,6 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
 
@@ -54,7 +51,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.calendario) {
             startActivity(new Intent(this, CalendarioActivity.class));
         } else if (id == R.id.contactos) {
-            //startActivity(new Intent(this, InternosActivity.class));
+            startActivity(new Intent(this, GubernamentalesActivity.class));
+        } else if (id == R.id.competencia) {
+            startActivity(new Intent(this, CompetenciasActivity.class));
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -62,6 +61,6 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void goToAlerts(View v) {
-        startActivity(new Intent(this, AlertasActivity.class));
+        startActivity(new Intent(this, AlertasProductosActivity.class));
     }
 }

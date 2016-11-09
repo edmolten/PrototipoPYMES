@@ -12,21 +12,16 @@ public class InternosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_internos);
     }
 
-    public void goToRentabilidadEmpresa(View v) {
+    public void goToVentasTotales(View v) {
 
     }
 
-    public void goToRentabilidadPorProductos(View v) {
+    public void goToVentasPorLineaDeProductos(View v) {
 
     }
 
-    public void goToProductividad(View v) {
+    public void goToRentabilidadNegocio(View v) {
 
     }
-
-    public void goToVentas(View v) {
-
-    }
-
 
 }

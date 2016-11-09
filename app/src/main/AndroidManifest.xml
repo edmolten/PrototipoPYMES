@@ -85,13 +85,6 @@
                 android:value="lalo.cl.prototipopymes.ExternosActivity" />
         </activity>
         <activity
-            android:name=".Calendario"
-            android:label="Calendario">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="lalo.cl.prototipopymes.MainActivity" />
-        </activity>
-        <activity
             android:name=".CalendarioActivity"
             android:label="@string/title_activity_calendario"
             android:parentActivityName=".MainActivity"
@@ -100,6 +93,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="lalo.cl.prototipopymes.MainActivity" />
         </activity>
+        <activity
+            android:name=".GubernamentalesActivity"
+            android:label="Contactos"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lalo.cl.prototipopymes.MainActivity" />
+        </activity>
+        <activity
+            android:name=".AgregarGubernamentalesActivity"
+            android:label="Agregar contactos">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lalo.cl.prototipopymes.GubernamentalesActivity" />
+        </activity>
+        <activity android:name=".VentasActivity"></activity>
     </application>
 
 </manifest>

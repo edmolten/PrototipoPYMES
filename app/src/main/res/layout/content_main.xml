@@ -21,10 +21,10 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:onClick="goToAlerts"
-        android:text="Alertas"
+        android:layout_marginBottom="12dp"
         android:background="@color/colorPrimary"
-        android:layout_marginBottom="12dp" />
+        android:onClick="goToAlerts"
+        android:text="Alertas" />
 
     <Button
         android:id="@+id/button2"
@@ -34,9 +34,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/button1"
-        android:text="Compormisos"
+        android:layout_marginBottom="12dp"
         android:background="@color/colorPrimary"
-        android:layout_marginBottom="12dp" />
+        android:text="Compormisos" />
 
     <Button
         android:id="@+id/button3"
@@ -46,8 +46,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/button2"
-        android:text="Actualizaciones"
+        android:layout_marginBottom="12dp"
         android:background="@color/colorPrimary"
-        android:layout_marginBottom="12dp" />
+        android:text="Actualizaciones" />
 
 </RelativeLayout>

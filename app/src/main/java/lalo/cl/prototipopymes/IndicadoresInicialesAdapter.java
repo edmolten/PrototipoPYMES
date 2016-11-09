@@ -8,16 +8,15 @@ import android.widget.TextView;
 public class IndicadoresInicialesAdapter extends IndicadoresAdapter {
     public IndicadoresInicialesAdapter(LayoutInflater inflater) {
         super(inflater);
-        this.indicadores = IndicadoresAdapter.indicadoresIniciales;
+        this.gubernamentales = IndicadoresAdapter.indicadoresIniciales;
     }
-
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View vistaIndicador = inflater.inflate(R.layout.view_externo, null);
         TextView nombre = (TextView) vistaIndicador.findViewById(R.id.indicador);
         TextView valor = (TextView) vistaIndicador.findViewById(R.id.valor);
-        Indicador indicador = indicadores.get(position);
+        Indicador indicador = gubernamentales.get(position);
         nombre.setText(indicador.getNombre());
         valor.setText(indicador.getValor());
         return vistaIndicador;

@@ -1,6 +1,5 @@
 package lalo.cl.prototipopymes;
 
-
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +12,7 @@ public class IndicadoresReservaAdapter extends IndicadoresAdapter {
 
     public IndicadoresReservaAdapter(LayoutInflater inflater, AppCompatActivity activity) {
         super(inflater);
-        this.indicadores = IndicadoresAdapter.otrosIndicadores;
+        this.gubernamentales = IndicadoresAdapter.otrosIndicadores;
         this.activity = activity;
     }
 
@@ -22,13 +21,13 @@ public class IndicadoresReservaAdapter extends IndicadoresAdapter {
         View vistaIndicador = inflater.inflate(R.layout.view_externo, null);
         TextView nombre = (TextView) vistaIndicador.findViewById(R.id.indicador);
         TextView valor = (TextView) vistaIndicador.findViewById(R.id.valor);
-        final Indicador indicador = indicadores.get(position);
+        final Indicador indicador = gubernamentales.get(position);
         nombre.setText(indicador.getNombre());
         valor.setText("");
         vistaIndicador.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                indicadores.remove(indicador);
+                gubernamentales.remove(indicador);
                 IndicadoresAdapter.indicadoresIniciales.add(indicador);
 
                 activity.finish();
