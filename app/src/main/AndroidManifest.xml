@@ -108,7 +108,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="lalo.cl.prototipopymes.GubernamentalesActivity" />
         </activity>
-        <activity android:name=".VentasActivity"></activity>
+        <activity android:name=".VentasActivity"
+            android:label="Valores">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lalo.cl.prototipopymes.InternosActivity" />
+        </activity>
     </application>
 
 </manifest>
