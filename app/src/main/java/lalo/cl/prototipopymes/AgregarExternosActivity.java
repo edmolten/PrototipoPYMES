@@ -14,7 +14,7 @@ public class AgregarExternosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar_externos);
         indicadoresList = (ListView) findViewById(R.id.list);
-        adapter = new IndicadoresReservaAdapter(getLayoutInflater(),this);
+        adapter = new IndicadoresReservaAdapter(getLayoutInflater(), this);
         indicadoresList.setAdapter(adapter);
     }
 }

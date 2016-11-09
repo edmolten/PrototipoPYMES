@@ -12,5 +12,14 @@
     android:layout_marginTop="48dp">
     <lalo.cl.prototipopymes.MonthView
         android:layout_width="fill_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/cal"
+        android:layout_marginBottom="6dp" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list_eventos"
+        android:dividerHeight="6dp"
+        android:layout_below="@+id/cal" />
 </RelativeLayout>

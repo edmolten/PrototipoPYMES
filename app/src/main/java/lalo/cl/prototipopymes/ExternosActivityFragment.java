@@ -19,7 +19,7 @@ public class ExternosActivityFragment extends Fragment {
         indicadoresList = (android.widget.ListView) v.findViewById(R.id.list);
         adapter = new IndicadoresInicialesAdapter(inflater);
         indicadoresList.setAdapter(adapter);
-        ((ExternosActivity)getActivity()).setListAndAdapter(adapter,indicadoresList);
+        ((ExternosActivity) getActivity()).setListAndAdapter(adapter, indicadoresList);
         return v;
     }
 }

@@ -6,7 +6,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.BaseAdapter;
 import android.widget.ListView;
 
 public class ExternosActivity extends AppCompatActivity {
@@ -26,7 +25,7 @@ public class ExternosActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                activity.startActivityForResult(new Intent(activity,AgregarExternosActivity.class),0);
+                activity.startActivityForResult(new Intent(activity, AgregarExternosActivity.class), 0);
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
