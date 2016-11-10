@@ -18,11 +18,11 @@ public class InternosActivity extends AppCompatActivity {
     }
 
     public void goToVentasPorLineaDeProductos(View v) {
-
+        startActivity(new Intent(this, VentaLineaProducto.class));
     }
 
     public void goToRentabilidadNegocio(View v) {
-
+        startActivity(new Intent(this, RentabilidadActivity.class));
     }
 
 }

@@ -1,7 +1,7 @@
 package lalo.cl.prototipopymes;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 public class VentasActivity extends AppCompatActivity {
 
@@ -9,5 +9,7 @@ public class VentasActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ventas);
+        DateViewHelper.setDate(this, R.id.date);
+
     }
 }

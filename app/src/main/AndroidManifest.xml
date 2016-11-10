@@ -56,11 +56,6 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".AlertasActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="lalo.cl.prototipopymes.MainActivity" />
-        </activity>
         <activity
             android:name=".InternosActivity"
             android:label="Indicadores Internos">
@@ -108,11 +103,28 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="lalo.cl.prototipopymes.GubernamentalesActivity" />
         </activity>
-        <activity android:name=".VentasActivity"
+        <activity
+            android:name=".VentasActivity"
             android:label="Valores">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="lalo.cl.prototipopymes.InternosActivity" />
+        </activity>
+        <activity
+            android:name=".VentaLineaProducto"
+            android:label="Valores">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lalo.cl.prototipopymes.InternosActivity" />
+        </activity>
+        <activity
+            android:name=".RentabilidadActivity"
+            android:label="@string/title_activity_rentabilidad"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lalo.cl.prototipopymes.MainActivity" />
         </activity>
     </application>
 
