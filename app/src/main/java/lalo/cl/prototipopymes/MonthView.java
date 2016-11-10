@@ -42,26 +42,6 @@ public class MonthView extends TableLayout {
     private String[] months = new String[12];
     private boolean animFlag = false;
     private TextView tv;
-    //Change month listener called when the user clicks to show next or prev month.
-    private OnClickListener ChangeMonthListener = new OnClickListener() {
-
-        @Override
-        public void onClick(View v) {
-            ImageView tv = (ImageView) v;
-            //If previous month is to be displayed subtract one from current month.
-            if (tv.getTag().equals("<")) {
-                cal.add(Calendar.MONTH, -1);
-                animFlag = false;
-            }
-            //If next month is to be displayed add one to the current month
-            else {
-                cal.add(Calendar.MONTH, 1);
-                animFlag = true;
-            }
-            selected_day = 0;
-            DisplayMonth(true);
-        }
-    };
     //Called when a day is clicked.
     private OnClickListener dayClickedListener = new OnClickListener() {
         @Override
@@ -87,6 +67,26 @@ public class MonthView extends TableLayout {
             tv.setBackgroundResource(R.drawable.selectedgrad);
             DisplayMonth(false);
             cal.set(Calendar.DAY_OF_MONTH, day);
+        }
+    };
+    //Change month listener called when the user clicks to show next or prev month.
+    private OnClickListener ChangeMonthListener = new OnClickListener() {
+
+        @Override
+        public void onClick(View v) {
+            ImageView tv = (ImageView) v;
+            //If previous month is to be displayed subtract one from current month.
+            if (tv.getTag().equals("<")) {
+                cal.add(Calendar.MONTH, -1);
+                animFlag = false;
+            }
+            //If next month is to be displayed add one to the current month
+            else {
+                cal.add(Calendar.MONTH, 1);
+                animFlag = true;
+            }
+            selected_day = 0;
+            DisplayMonth(true);
         }
     };
 

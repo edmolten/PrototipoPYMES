@@ -124,7 +124,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="lalo.cl.prototipopymes.MainActivity" />
+                android:value="lalo.cl.prototipopymes.InternosActivity" />
         </activity>
     </application>
 
