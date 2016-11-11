@@ -1,13 +1,213 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="lalo.cl.prototipopymes.ResultadoNegocio">
+    android:orientation="vertical"
+    tools:context="lalo.cl.prototipopymes.ResultadoNegocio"
+    android:padding="6dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp">
 
-</FrameLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="6dp">
+
+            <TextView
+                android:text="Ventas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/margen_Ventas"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:text="Costos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/margenCostos"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_below="@+id/margen_Ventas"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:text="- $ 7.492.574"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView11"
+                android:layout_alignBaseline="@+id/margenCostos"
+                android:layout_alignBottom="@+id/margenCostos"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/margenCostos"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textAlignment="textEnd" />
+
+            <TextView
+                android:text="$ 25.266.890"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView110"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textAlignment="textEnd"
+                android:layout_alignBaseline="@+id/margen_Ventas"
+                android:layout_alignBottom="@+id/margen_Ventas"
+                android:layout_toEndOf="@+id/margen_Ventas" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="6dp">
+
+            <TextView
+                android:text="Margen Bruto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/margen_Ventas2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:text="Total Gastos Directos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/margenCostos2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_below="@+id/margen_Ventas2"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:text="$ 17.774.316"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1101"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textAlignment="textEnd"
+                android:layout_alignBaseline="@+id/margen_Ventas2"
+                android:layout_alignBottom="@+id/margen_Ventas2"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/margen_Ventas2" />
+
+            <TextView
+                android:text="- $ 14.910.805"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView111"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textAlignment="textEnd"
+                android:layout_alignBaseline="@+id/margenCostos2"
+                android:layout_alignBottom="@+id/margenCostos2"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/margenCostos2" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="6dp">
+
+            <TextView
+                android:text="Margen Neto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/margen_Ventas2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:text="Depreciaciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/margenCostos2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_below="@+id/margen_Ventas2"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:text="$ 2.863.511"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1101"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textAlignment="textEnd"
+                android:layout_alignBaseline="@+id/margen_Ventas2"
+                android:layout_alignBottom="@+id/margen_Ventas2"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/margen_Ventas2" />
+
+            <TextView
+                android:text="- $ 366.000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView111"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textAlignment="textEnd"
+                android:layout_alignBaseline="@+id/margenCostos2"
+                android:layout_alignBottom="@+id/margenCostos2"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/margenCostos2" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="6dp">
+
+            <TextView
+                android:text="Resultado Negocio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/margenBruto"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:text="$ 2.497.511"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView10"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textAlignment="textEnd"
+                android:layout_alignBaseline="@+id/margenBruto"
+                android:layout_alignBottom="@+id/margenBruto"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/margenBruto" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="- % 9,71"
+        android:textAlignment="textEnd"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/date1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="textEnd"
+        android:layout_marginBottom="10dp" />
+
+
+</LinearLayout>
