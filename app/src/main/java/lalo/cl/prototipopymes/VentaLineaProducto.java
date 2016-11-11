@@ -12,6 +12,5 @@ public class VentaLineaProducto extends AppCompatActivity {
         DateViewHelper.setDate(this, R.id.date1);
         DateViewHelper.setDate(this, R.id.date2);
         DateViewHelper.setDate(this, R.id.date3);
-        DateViewHelper.setDate(this, R.id.date4);
     }
 }

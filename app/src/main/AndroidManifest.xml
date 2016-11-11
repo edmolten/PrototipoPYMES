@@ -81,7 +81,7 @@
         </activity>
         <activity
             android:name=".CalendarioActivity"
-            android:label="@string/title_activity_calendario"
+            android:label="Agenda"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data

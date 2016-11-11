@@ -11,7 +11,9 @@ public class MargenNeto extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_margen_neto, container, false);
+        View v = inflater.inflate(R.layout.fragment_margen_neto, container, false);
+        DateViewHelper.setDate(v,R.id.date1);
+        return  v;
     }
 
 }

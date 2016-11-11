@@ -12,11 +12,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -67,6 +69,7 @@ public class MonthView extends TableLayout {
             tv.setBackgroundResource(R.drawable.selectedgrad);
             DisplayMonth(false);
             cal.set(Calendar.DAY_OF_MONTH, day);
+            displayEvents(day);
         }
     };
     //Change month listener called when the user clicks to show next or prev month.
@@ -89,6 +92,7 @@ public class MonthView extends TableLayout {
             DisplayMonth(true);
         }
     };
+    private CalendarioActivity activity;
 
     //prevCal will be used to display last few dates of previous month in the calendar
     public MonthView(Context context, AttributeSet attrs) {
@@ -136,7 +140,7 @@ public class MonthView extends TableLayout {
         tempcal.clear(Calendar.SECOND);
         Calendar tempcal1 = (Calendar) tempcal.clone();
         tempcal1.set(Calendar.DATE, tempcal.getActualMaximum(Calendar.DATE));
-        db.open();
+      /*  db.open();
         Cursor c = db.queryRow("_dtstart >= " + tempcal.getTimeInMillis() + " AND _dtstart <= " + tempcal1.getTimeInMillis());
         if (c.moveToFirst())
             do {
@@ -148,7 +152,10 @@ public class MonthView extends TableLayout {
                 }
             } while (c.moveToNext());
         c.close();
-        db.close();
+        db.close();*/
+        isEvent[2] = true;
+        isEvent[20] = true;
+        isEvent[27] = true;
     }
 
     void DisplayMonth(boolean animationEnabled) {
@@ -310,6 +317,22 @@ public class MonthView extends TableLayout {
     }
 
     void displayEvents(int day) {
+        activity.eventos = new ArrayList<>();
+        if(day == 2){
+            activity.eventos.add(new Evento("Ir a cobrar", "De 14:00 a 16:00", "Hector 98679834"));
+        }
+        else if (day ==20){
+            activity.eventos.add(new Evento("Ir a pagar", "De 08:00 a 16:00", "Banco 234532473"));
+        }
+        else if (day == 27){
+            activity.eventos.add(new Evento("Comprar mercadería", "Todo el día", "Tienda 21321312"));
+        }
+        activity.adapter = new EventoAdapter(activity.eventos, activity.getLayoutInflater());
+        ListView eventosLista = (ListView) activity.findViewById(R.id.list_eventos);
+        eventosLista.setAdapter(activity.adapter);
+    }
 
+    public void setActivity(CalendarioActivity activity) {
+        this.activity = activity;
     }
 }
