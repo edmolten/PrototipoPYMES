@@ -5,7 +5,8 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    card_view:cardUseCompatPadding="true">
+    card_view:cardUseCompatPadding="true"
+    style="@style/CardViewStyle">
 
     <RelativeLayout
         android:layout_width="match_parent"

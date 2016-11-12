@@ -126,6 +126,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="lalo.cl.prototipopymes.InternosActivity" />
         </activity>
+        <activity android:name=".Compromisos"></activity>
     </application>
 
 </manifest>

@@ -11,11 +11,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="lalo.cl.prototipopymes.MainActivity"
-    tools:showIn="@layout/app_bar_main">
+    tools:showIn="@layout/app_bar_main"
+    android:background="@drawable/gradiente">
 
     <Button
         android:id="@+id/button1"
-        style="@style/Widget.AppCompat.Button.Colored"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -28,7 +29,6 @@
 
     <Button
         android:id="@+id/button2"
-        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -36,11 +36,13 @@
         android:layout_below="@+id/button1"
         android:layout_marginBottom="12dp"
         android:background="@color/colorPrimary"
-        android:text="Compormisos" />
+        android:text="Compormisos"
+        style="@style/Widget.AppCompat.Button"
+        android:onClick="goToCompromisos" />
 
     <Button
         android:id="@+id/button3"
-        style="@style/Widget.AppCompat.Button.Colored"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"

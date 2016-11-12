@@ -319,13 +319,19 @@ public class MonthView extends TableLayout {
     void displayEvents(int day) {
         activity.eventos = new ArrayList<>();
         if(day == 2){
-            activity.eventos.add(new Evento("Ir a cobrar", "De 14:00 a 16:00", "Hector 98679834"));
+            activity.eventos.add(new Evento("Cobrar Cosemar", "De 14:00 a 16:00", "Joyse Carmona 995316953"));
+            activity.eventos.add(new Evento("Reunión Compite", "14:00", " Paul Trench 982337052"));
         }
         else if (day ==20){
-            activity.eventos.add(new Evento("Ir a pagar", "De 08:00 a 16:00", "Banco 234532473"));
+            activity.eventos.add(new Evento("Entregar Carozzi", "08:00", "Francisca Marchall 993099588"));
+            activity.eventos.add(new Evento("Comprar tela", "09:00", "Maite 995599578"));
+            activity.eventos.add(new Evento("Depositar Cheque", "Hora banco", "Oscar Iriarte 967099908"));
+
         }
         else if (day == 27){
-            activity.eventos.add(new Evento("Comprar mercadería", "Todo el día", "Tienda 21321312"));
+            activity.eventos.add(new Evento("Hacer prueba Uniformes Bomberos, Alvarez #225", "10:00", "-"));
+            activity.eventos.add(new Evento("Llamar a German", "13:00", "58821465"));
+            activity.eventos.add(new Evento("Licitación Esval: Calle Esmeralda #550", "15:00", "-"));
         }
         activity.adapter = new EventoAdapter(activity.eventos, activity.getLayoutInflater());
         ListView eventosLista = (ListView) activity.findViewById(R.id.list_eventos);

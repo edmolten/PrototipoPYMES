@@ -63,4 +63,13 @@ public class MainActivity extends AppCompatActivity
     public void goToAlerts(View v) {
         startActivity(new Intent(this, AlertasProductosActivity.class));
     }
+
+    public void goToCompromisos(View v) {
+        startActivity(new Intent(this, Compromisos.class));
+    }
+
+    public void goToActualizaciones(View v) {
+       // startActivity(new Intent(this, AlertasProductosActivity.class));
+    }
+
 }
