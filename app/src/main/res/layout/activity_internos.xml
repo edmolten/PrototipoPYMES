@@ -14,7 +14,8 @@
         android:id="@+id/ventas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="6dp">
+        android:layout_marginBottom="6dp"
+        style="@style/CardViewStyle">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -36,7 +37,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/imageView6"
-                android:text="Ventas Totales" />
+                android:text="Ventas Totales"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
@@ -45,7 +48,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="6dp"
-        android:onClick="goToVentasPorLineaDeProductos">
+        android:onClick="goToVentasPorLineaDeProductos"
+        style="@style/CardViewStyle">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -67,7 +71,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/image6"
-                android:text="Ventas por Linea de Producto" />
+                android:text="Ventas por Linea de Producto"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
@@ -76,7 +82,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="6dp"
-        android:onClick="goToRentabilidadNegocio">
+        android:onClick="goToRentabilidadNegocio"
+        style="@style/CardViewStyle">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -96,7 +103,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/image5"
-                android:text="Rentabilidad Negocio" />
+                android:text="Rentabilidad Negocio"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 

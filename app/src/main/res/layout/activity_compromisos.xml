@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_compromisos"
     android:layout_width="match_parent"
@@ -22,8 +23,9 @@
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                style="CardViewStyle"
-                android:layout_marginBottom="6dp">
+                style="@style/CardViewStyle"
+                android:layout_marginBottom="6dp"
+                app:cardPreventCornerOverlap="false">
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -36,8 +38,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="3dp"
                         android:text="Cobrar Cosemar"
-                        android:textSize="18sp"
-                        android:textStyle="normal|bold" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/black" />
 
                     <TextView
                         android:id="@+id/hora"
@@ -69,7 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="6dp"
-                style="CardViewStyle">
+                style="@style/CardViewStyle">
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -82,8 +84,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="3dp"
                         android:text="Reunión Compite"
-                        android:textSize="18sp"
-                        android:textStyle="normal|bold" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/black" />
 
                     <TextView
                         android:id="@+id/hora2"
@@ -115,7 +117,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="6dp"
-                style="CardViewStyle">
+                style="@style/CardViewStyle">
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -128,8 +130,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="3dp"
                         android:text="Entregar Carozzi"
-                        android:textSize="18sp"
-                        android:textStyle="normal|bold" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/black" />
 
                     <TextView
                         android:id="@+id/hora3"
@@ -161,7 +163,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="6dp"
-                style="CardViewStyle">
+                style="@style/CardViewStyle">
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -174,8 +176,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="3dp"
                         android:text="Comprar tela"
-                        android:textSize="18sp"
-                        android:textStyle="normal|bold" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/black" />
 
                     <TextView
                         android:id="@+id/hora4"
@@ -207,7 +209,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="6dp"
-                style="CardViewStyle">
+                style="@style/CardViewStyle">
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -220,8 +222,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="3dp"
                         android:text="Depositar Cheque"
-                        android:textSize="18sp"
-                        android:textStyle="normal|bold" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/black" />
 
                     <TextView
                         android:id="@+id/hora5"
