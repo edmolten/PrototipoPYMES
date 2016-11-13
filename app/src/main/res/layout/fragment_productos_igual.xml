@@ -24,7 +24,7 @@
             android:layout_alignParentEnd="true"
             android:layout_below="@+id/imageView4"
             android:layout_marginBottom="6dp"
-            android:text="Ventas respecto\nmes pasado"
+            android:text="Respecto\nmes pasado"
             android:textColor="@color/colorPrimary" />
 
         <ImageView

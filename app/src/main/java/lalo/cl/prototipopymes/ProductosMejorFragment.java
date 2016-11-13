@@ -20,12 +20,8 @@ public class ProductosMejorFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         ArrayList<Producto> productos = new ArrayList<>();
-        productos.add(new Producto("1 kg Pan", "+ 4%"));
-        productos.add(new Producto("2 lt Bebida", "+ 6%"));
-        productos.add(new Producto("Galleta chica", "+ 1%"));
-        productos.add(new Producto("Helado", "+ 2%"));
-        productos.add(new Producto("Pastel de choclo", "+ 10%"));
-        productos.add(new Producto("Torta Naranja Chocolate", "+ 0.5%"));
+        productos.add(new Producto("Margen Bruto", "+ % 8,91"));
+
 
         adapter = new ProductosAlertasAdapter(inflater, productos, this);
         View view = inflater.inflate(R.layout.fragment_productos_mejor, container, false);

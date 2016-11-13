@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_nuevo_evento"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="lalo.cl.prototipopymes.NuevoEvento"
+        android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                    android:text="Descripción"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView15"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@android:color/background_light"
+                    android:layout_marginBottom="6dp" />
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/descripcion"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@color/colorPrimary"
+                    android:textColorHighlight="@color/colorPrimary"
+                    android:backgroundTint="@android:color/background_light"
+                    android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:text="Contacto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView19"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/contacto"
+                android:backgroundTint="@android:color/background_light"
+                android:layout_marginBottom="6dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:text="Día"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView21"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp"
+                android:layout_marginBottom="6dp" />
+
+            <Button
+                android:text="Seleccionar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/botonDia"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:background="@color/colorAccent"
+                android:layout_marginBottom="6dp"
+                android:onClick="pickDate" />
+
+            <TextView
+                    android:text="Hora"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView17"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@android:color/background_light"
+                    android:layout_marginBottom="6dp" />
+
+            <Button
+                android:text="Seleccionar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/botonHora"
+                android:background="@color/colorAccent"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="6dp"
+                android:onClick="pickTime" />
+
+            <Button
+                android:text="OK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button5"
+                android:textColor="@color/colorPrimary"
+                android:background="@color/colorAccent"
+                android:layout_marginBottom="6dp"
+                android:onClick="ok" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+

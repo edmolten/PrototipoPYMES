@@ -21,6 +21,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Map;
 
 public class MonthView extends TableLayout {
 
@@ -129,10 +130,8 @@ public class MonthView extends TableLayout {
 
     //Main function for displaying the current selected month
     private void checkForEvents() {
-        DBHelper db = new DBHelper(context);
         for (int i = 0; i < 32; i++)
             isEvent[i] = false;
-
         Calendar tempcal = (Calendar) cal.clone();
         tempcal.set(Calendar.DATE, 1);
         tempcal.clear(Calendar.HOUR);
@@ -140,22 +139,9 @@ public class MonthView extends TableLayout {
         tempcal.clear(Calendar.SECOND);
         Calendar tempcal1 = (Calendar) tempcal.clone();
         tempcal1.set(Calendar.DATE, tempcal.getActualMaximum(Calendar.DATE));
-      /*  db.open();
-        Cursor c = db.queryRow("_dtstart >= " + tempcal.getTimeInMillis() + " AND _dtstart <= " + tempcal1.getTimeInMillis());
-        if (c.moveToFirst())
-            do {
-                try {
-                    isEvent[new Date(c.getLong(c.getColumnIndexOrThrow("_dtstart"))).getDate()] = true;
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            } while (c.moveToNext());
-        c.close();
-        db.close();*/
-        isEvent[2] = true;
-        isEvent[20] = true;
-        isEvent[27] = true;
+        for(Map.Entry<Integer,ArrayList<Evento>> kv : activity.mapa.entrySet()){
+            isEvent[kv.getKey()] = true;
+        }
     }
 
     void DisplayMonth(boolean animationEnabled) {
@@ -317,23 +303,14 @@ public class MonthView extends TableLayout {
     }
 
     void displayEvents(int day) {
-        activity.eventos = new ArrayList<>();
-        if(day == 2){
-            activity.eventos.add(new Evento("Cobrar Cosemar", "De 14:00 a 16:00", "Joyse Carmona 995316953"));
-            activity.eventos.add(new Evento("Reunión Compite", "14:00", " Paul Trench 982337052"));
+        ArrayList<Evento> eventos = activity.mapa.get(day);
+        if(eventos == null){
+            activity.adapter = new EventoAdapter(new ArrayList<Evento>(), activity.getLayoutInflater());
+            ListView eventosLista = (ListView) activity.findViewById(R.id.list_eventos);
+            eventosLista.setAdapter(activity.adapter);
+            return;
         }
-        else if (day ==20){
-            activity.eventos.add(new Evento("Entregar Carozzi", "08:00", "Francisca Marchall 993099588"));
-            activity.eventos.add(new Evento("Comprar tela", "09:00", "Maite 995599578"));
-            activity.eventos.add(new Evento("Depositar Cheque", "Hora banco", "Oscar Iriarte 967099908"));
-
-        }
-        else if (day == 27){
-            activity.eventos.add(new Evento("Hacer prueba Uniformes Bomberos, Alvarez #225", "10:00", "-"));
-            activity.eventos.add(new Evento("Llamar a German", "13:00", "58821465"));
-            activity.eventos.add(new Evento("Licitación Esval: Calle Esmeralda #550", "15:00", "-"));
-        }
-        activity.adapter = new EventoAdapter(activity.eventos, activity.getLayoutInflater());
+        activity.adapter = new EventoAdapter(eventos, activity.getLayoutInflater());
         ListView eventosLista = (ListView) activity.findViewById(R.id.list_eventos);
         eventosLista.setAdapter(activity.adapter);
     }

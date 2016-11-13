@@ -83,6 +83,7 @@ public class ProductosAdapter implements ListAdapter {
             pcent.setTextColor(activity.getResources().getColor(R.color.green));
         } else {
             pcent.setText("Mismo precio");
+            pcent.setTextColor(activity.getResources().getColor(R.color.yellow));
         }
         return vistaProducto;
     }

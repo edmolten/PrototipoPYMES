@@ -56,7 +56,7 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".InternosActivity"
             android:label="Indicadores Internos">
@@ -68,7 +68,7 @@
             android:name=".ExternosActivity"
             android:label="Indicadores Externos"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".AgregarExternosActivity"
             android:label="Agregar Indicadores">
@@ -118,9 +118,7 @@
             android:name=".RentabilidadActivity"
             android:label="@string/title_activity_rentabilidad"
             android:parentActivityName=".InternosActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".Compromisos"
             android:label="Compromisos">
@@ -128,10 +126,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="lalo.cl.prototipopymes.MainActivity" />
         </activity>
-        <activity android:name=".Actualizaciones"
+        <activity
+            android:name=".Actualizaciones"
             android:label="Actualizaciones"
-            android:parentActivityName=".MainActivity">
-
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".NuevoEvento"
+            android:label="Nuevo Evento">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lalo.cl.prototipopymes.CalendarioActivity" />
         </activity>
     </application>
 
