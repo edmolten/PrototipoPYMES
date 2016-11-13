@@ -3,14 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="lalo.cl.prototipopymes.MargenNeto"
-    android:padding="6dp">
+    android:padding="6dp"
+    tools:context="lalo.cl.prototipopymes.MargenNeto">
 
     <android.support.v7.widget.CardView
+        style="@style/CardViewStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="6dp"
-        style="@style/CardViewStyle">
+        android:layout_marginBottom="6dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -18,51 +18,51 @@
             android:padding="12dp">
 
             <TextView
-                android:text="Ventas"
+                android:id="@+id/margen_Ventas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/margen_Ventas"
+                android:text="Ventas"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <TextView
-                android:text="Costos"
+                android:id="@+id/margenCostos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/margenCostos"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_alignParentStart="true"
                 android:layout_below="@+id/margen_Ventas"
-                android:layout_alignParentStart="true" />
+                android:text="Costos"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <TextView
-                android:text="- $ 7.492.574"
+                android:id="@+id/textView11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView11"
                 android:layout_alignBaseline="@+id/margenCostos"
                 android:layout_alignBottom="@+id/margenCostos"
                 android:layout_alignParentEnd="true"
                 android:layout_toEndOf="@+id/margenCostos"
-                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-                android:textAlignment="textEnd" />
+                android:text="- $ 7.492.574"
+                android:textAlignment="textEnd"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
             <TextView
-                android:text="$ 25.266.890"
+                android:id="@+id/textView110"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView110"
-                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-                android:textAlignment="textEnd"
                 android:layout_alignBaseline="@+id/margen_Ventas"
                 android:layout_alignBottom="@+id/margen_Ventas"
-                android:layout_toEndOf="@+id/margen_Ventas" />
+                android:layout_toEndOf="@+id/margen_Ventas"
+                android:text="$ 25.266.890"
+                android:textAlignment="textEnd"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
+        style="@style/CardViewStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="6dp"
-        style="@style/CardViewStyle">
+        android:layout_marginBottom="6dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -70,52 +70,52 @@
             android:padding="12dp">
 
             <TextView
-                android:text="Margen Bruto"
+                android:id="@+id/margen_Ventas2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/margen_Ventas2"
+                android:text="Margen Bruto"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <TextView
-                android:text="Total Gastos Directos"
+                android:id="@+id/margenCostos2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/margenCostos2"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_alignParentStart="true"
                 android:layout_below="@+id/margen_Ventas2"
-                android:layout_alignParentStart="true" />
+                android:text="Total Gastos Directos"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <TextView
-                android:text="$ 17.774.316"
+                android:id="@+id/textView1101"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView1101"
-                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-                android:textAlignment="textEnd"
                 android:layout_alignBaseline="@+id/margen_Ventas2"
                 android:layout_alignBottom="@+id/margen_Ventas2"
                 android:layout_alignParentEnd="true"
-                android:layout_toEndOf="@+id/margen_Ventas2" />
+                android:layout_toEndOf="@+id/margen_Ventas2"
+                android:text="$ 17.774.316"
+                android:textAlignment="textEnd"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
             <TextView
-                android:text="- $ 14.910.805"
+                android:id="@+id/textView111"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView111"
-                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-                android:textAlignment="textEnd"
                 android:layout_alignBaseline="@+id/margenCostos2"
                 android:layout_alignBottom="@+id/margenCostos2"
                 android:layout_alignParentEnd="true"
-                android:layout_toEndOf="@+id/margenCostos2" />
+                android:layout_toEndOf="@+id/margenCostos2"
+                android:text="- $ 14.910.805"
+                android:textAlignment="textEnd"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
+        style="@style/CardViewStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="6dp"
-        style="@style/CardViewStyle">
+        android:layout_marginBottom="6dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -123,28 +123,29 @@
             android:padding="12dp">
 
             <TextView
-                android:text="Margen Neto"
+                android:id="@+id/margenBruto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/margenBruto"
+                android:text="Margen Neto"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@android:color/black"
                 android:textStyle="normal|bold" />
 
             <TextView
-                android:text="$ 2.863.511"
+                android:id="@+id/textView10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView10"
-                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
-                android:textAlignment="textEnd"
                 android:layout_alignBaseline="@+id/margenBruto"
                 android:layout_alignBottom="@+id/margenBruto"
                 android:layout_alignParentEnd="true"
-                android:layout_toEndOf="@+id/margenBruto" />
+                android:layout_toEndOf="@+id/margenBruto"
+                android:text="$ 2.863.511"
+                android:textAlignment="textEnd"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
         </RelativeLayout>
     </android.support.v7.widget.CardView>
+
     <TextView
         android:id="@+id/textView22"
         android:layout_width="match_parent"
@@ -157,9 +158,10 @@
         android:id="@+id/date1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:text="TextView"
         android:textAlignment="textEnd"
-        android:layout_marginBottom="10dp" />
+        android:textColor="@android:color/background_light" />
 
 
 </LinearLayout>

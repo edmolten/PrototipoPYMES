@@ -55,7 +55,8 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:label="@string/title_activity_login" />
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".InternosActivity"
             android:label="Indicadores Internos">
@@ -67,11 +68,7 @@
             android:name=".ExternosActivity"
             android:label="Indicadores Externos"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="lalo.cl.prototipopymes.MainActivity" />
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".AgregarExternosActivity"
             android:label="Agregar Indicadores">
@@ -120,17 +117,21 @@
         <activity
             android:name=".RentabilidadActivity"
             android:label="@string/title_activity_rentabilidad"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".InternosActivity"
             android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="lalo.cl.prototipopymes.InternosActivity" />
+
         </activity>
-        <activity android:name=".Compromisos"
+        <activity
+            android:name=".Compromisos"
             android:label="Compromisos">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="lalo.cl.prototipopymes.MainActivity" />
+        </activity>
+        <activity android:name=".Actualizaciones"
+            android:label="Actualizaciones"
+            android:parentActivityName=".MainActivity">
+
         </activity>
     </application>
 

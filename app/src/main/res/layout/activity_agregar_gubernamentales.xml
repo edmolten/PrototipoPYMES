@@ -17,7 +17,8 @@
         android:layout_alignParentBottom="false"
         android:layout_alignParentStart="false"
         android:layout_marginBottom="12dp"
-        android:text="Selecciona el contacto que deseas seguir" />
+        android:text="Selecciona el contacto que deseas seguir"
+        android:textColor="@android:color/background_light" />
 
     <ListView
         android:id="@+id/list"

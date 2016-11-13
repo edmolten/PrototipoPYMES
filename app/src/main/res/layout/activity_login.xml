@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,10 +20,23 @@
         android:layout_marginBottom="8dp"
         android:visibility="gone" />
 
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:paddingBottom="10dp"
+        android:paddingTop="20dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/icono" />
+
     <ScrollView
         android:id="@+id/login_form"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
 
         <LinearLayout
             android:id="@+id/email_login_form"
@@ -31,47 +45,61 @@
             android:orientation="vertical">
 
             <android.support.design.widget.TextInputLayout
+                style="@style/Widget.Design.TextInputLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/background_light"
+                android:textColorHint="@android:color/background_light">
 
                 <AutoCompleteTextView
                     android:id="@+id/email"
+                    style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimary"
                     android:hint="@string/prompt_email"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:popupBackground="@android:color/background_light"
+                    android:textColor="@android:color/white"
+                    android:textColorHighlight="@android:color/background_light"
+                    android:textColorLink="@android:color/white"
+                    android:textIsSelectable="false" />
 
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColorHint="@android:color/background_light">
 
                 <EditText
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/background_light"
                     android:hint="@string/prompt_password"
                     android:imeActionId="@+id/login"
                     android:imeActionLabel="@string/action_sign_in_short"
                     android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:textColor="@android:color/white"
+                    android:textColorHighlight="@color/colorPrimary"
+                    android:textColorHint="@android:color/background_light"
+                    android:textColorLink="@android:color/white" />
 
             </android.support.design.widget.TextInputLayout>
 
             <Button
                 android:id="@+id/email_sign_in_button"
-                style="@android:style/Widget.Material.Button"
+                style="@style/Widget.AppCompat.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:background="@color/colorPrimaryDark"
                 android:text="@string/action_sign_in"
-                android:textStyle="bold"
-                android:background="@color/colorPrimary" />
+                android:textColor="@android:color/background_light" />
 
         </LinearLayout>
     </ScrollView>

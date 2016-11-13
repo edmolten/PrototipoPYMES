@@ -12,10 +12,10 @@
 
     <android.support.v7.widget.CardView
         android:id="@+id/ventas"
+        style="@style/CardViewStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="6dp"
-        style="@style/CardViewStyle">
+        android:layout_marginBottom="6dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -45,11 +45,11 @@
 
     <android.support.v7.widget.CardView
         android:id="@+id/rentabilidad_por_productos"
+        style="@style/CardViewStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="6dp"
-        android:onClick="goToVentasPorLineaDeProductos"
-        style="@style/CardViewStyle">
+        android:onClick="goToVentasPorLineaDeProductos">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -79,11 +79,11 @@
 
     <android.support.v7.widget.CardView
         android:id="@+id/rentabilidad_empresa"
+        style="@style/CardViewStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="6dp"
-        android:onClick="goToRentabilidadNegocio"
-        style="@style/CardViewStyle">
+        android:onClick="goToRentabilidadNegocio">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -95,7 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
-                app:srcCompat="@drawable/ic_chart_areaspline" />
+                app:srcCompat="@drawable/ic_chart_areaspline_black" />
 
             <TextView
                 android:id="@+id/text1"

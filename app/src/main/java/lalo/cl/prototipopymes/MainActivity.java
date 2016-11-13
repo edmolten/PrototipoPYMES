@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -69,7 +70,18 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void goToActualizaciones(View v) {
-       // startActivity(new Intent(this, AlertasProductosActivity.class));
+        startActivity(new Intent(this, Actualizaciones.class));
     }
 
+    public void generarAlerta(View v) {
+
+    }
+
+    public void generarCompromiso(View v) {
+
+    }
+
+    public void generarActualizacion(View v) {
+
+    }
 }
