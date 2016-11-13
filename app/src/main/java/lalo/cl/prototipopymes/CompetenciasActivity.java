@@ -23,16 +23,23 @@ public class CompetenciasActivity extends AppCompatActivity {
 
     private void fill() {
         ArrayList<Producto> productos = new ArrayList<>();
-        ArrayList<Producto> empty = new ArrayList<>();
-        productos.add(new Producto("kg Pan", 600, 700));
-        productos.add(new Producto("kg Harina", 500, 500));
-        productos.add(new Producto("1.5 lt Bebida", 1000, 900));
-        adapter.add(new Competencia("Lider", "Supermercado", "2 km", R.drawable.lider, productos));
+        productos.add(new Producto("Polera Piqué", 7900, 8900));
+        productos.add(new Producto("Polera Polo", 5900, 4900));
+        productos.add(new Producto("Casaca Softshell", 26900, 24900));
+        productos.add(new Producto("Micropolar", 14900, 13900));
+        adapter.add(new Competencia("AYC", "Bordado, estampado y confecciones", "300 m", R.drawable.ayc, productos));
 
-        adapter.add(new Competencia("Jumbo", "Supermercado", "3 km", R.drawable.jumbo, empty));
+        productos = new ArrayList<>();
+        productos.add(new Producto("Poleron deportivo", 22900, 26900));
+        productos.add(new Producto("Equipo Rugby", 24900, 29900));
+        productos.add(new Producto("Equipo Futbol", 23900, 26900));
+        productos.add(new Producto("Camiseta", 12900, 12900));
+        adapter.add(new Competencia("Drava", "Ropa deportiva", "120 km", R.drawable.drava, productos));
 
-        adapter.add(new Competencia("El Ocaso", "Panaderia", "500 m", R.drawable.panaderia, empty));
-        adapter.add(new Competencia("Primavera", "Minimarket", "50 m", R.drawable.mini, empty));
-        adapter.add(new Competencia("Don Juan", "Minimarket", "600 m", R.drawable.mini2, empty));
+        productos = new ArrayList<>();
+        productos.add(new Producto("Poleron generación", 18900, 18900));
+        productos.add(new Producto("Cortaviento Americano", 23900, 24900));
+        adapter.add(new Competencia("Bambole", "Ropa de colegio y universidad", "10 km", R.drawable.bambole, productos));
+
     }
 }

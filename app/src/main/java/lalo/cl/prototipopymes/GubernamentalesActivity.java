@@ -12,7 +12,7 @@ public class GubernamentalesActivity extends AppCompatActivity {
 
     private FloatingActionButton fab;
     private ListView listView;
-    private GubernamentalesInicialesAdapter adapter;
+    static public GubernamentalesInicialesAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

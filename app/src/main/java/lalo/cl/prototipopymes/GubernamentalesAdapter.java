@@ -8,14 +8,19 @@ import java.util.ArrayList;
 
 public abstract class GubernamentalesAdapter implements ListAdapter {
 
-    static ArrayList<Gubernamental> gubernamentalesIniciales;
+    static  ArrayList<Gubernamental> gubernamentalesIniciales;
     static ArrayList<Gubernamental> otrosGubernamentales;
 
     static {
         gubernamentalesIniciales = new ArrayList<>();
         otrosGubernamentales = new ArrayList<>();
-        gubernamentalesIniciales.add(new Gubernamental("Municipalidad", "347654576", "www.municipalidad.cl"));
-        otrosGubernamentales.add(new Gubernamental("SEREMI", "65872464", "www.gobierno.cl"));
+        gubernamentalesIniciales.add(new Gubernamental("Servicio de Impustos Internos", "32-1324546", "www.sii.cl"));
+        gubernamentalesIniciales.add(new Gubernamental("Inspección del trabajo", "32-2681704 ", "www.dt.gob.cl"));
+        gubernamentalesIniciales.add(new Gubernamental("Municipalidad de Viña del Mar", "32-2682233 ", "www.vinadelmarchile.cl"));
+        otrosGubernamentales.add(new Gubernamental("SENCE", "32-2154000", "www.sence.cl"));
+        otrosGubernamentales.add(new Gubernamental("Corfo", "32-2517900", "www.corfo.cl"));
+        otrosGubernamentales.add(new Gubernamental("SENCE", "32-2154000", "www.corfo.cl"));
+
     }
 
     LayoutInflater inflater;

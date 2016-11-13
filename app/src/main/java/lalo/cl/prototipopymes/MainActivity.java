@@ -1,12 +1,19 @@
 package lalo.cl.prototipopymes;
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.NotificationManagerCompat;
+import android.support.v4.app.TaskStackBuilder;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.NotificationCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -73,15 +80,27 @@ public class MainActivity extends AppCompatActivity
         startActivity(new Intent(this, Actualizaciones.class));
     }
 
+    private void notificar(String titulo, String texto){
+        NotificationCompat.Builder b = new NotificationCompat.Builder(this);
+        b.setContentTitle(titulo).
+                setSmallIcon(R.mipmap.ic_launcher).
+                setLargeIcon(BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher)).
+                setContentText(texto).
+                addAction(R.drawable.ic_clock,"Ver luego", null).
+                addAction(R.drawable.ic_delete_black_24px,"Desechar",null);
+        NotificationManager mNotificationManager =
+                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        mNotificationManager.notify(1, b.build());
+    }
     public void generarAlerta(View v) {
-
+        notificar("Alerta", "Ventas Bordado y Estampado - 10% respecto semana anterior");
     }
 
     public void generarCompromiso(View v) {
-
+        notificar("Compromiso", "Cobrar Cosemar, mañana a las 14:00");
     }
 
     public void generarActualizacion(View v) {
-
+        notificar("Actualización", "Recuerda llenar las ventas del mes pasado");
     }
 }

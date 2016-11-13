@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="Mi Empresa"
+        android:text="Macus"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@android:color/black" />
 
@@ -31,7 +31,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sistema de Información"
+        android:text="Roberto Klug"
         android:textColor="@android:color/black" />
 
 </LinearLayout>
