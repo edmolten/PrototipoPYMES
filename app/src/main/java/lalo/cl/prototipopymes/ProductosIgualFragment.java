@@ -17,7 +17,7 @@ public class ProductosIgualFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ArrayList<Producto> productos = new ArrayList<>();
-        productos.add(new Producto("Margen Neto", "+ % 3,52"));
+        productos.add(new Producto("Margen Bruto", "- % 2,61"));
         adapter = new ProductosAlertasAdapter(inflater, productos, this);
         View view = inflater.inflate(R.layout.fragment_productos_igual, container, false);
         ListView list = (ListView) view.findViewById(R.id.list);

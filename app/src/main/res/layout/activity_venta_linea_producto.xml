@@ -47,15 +47,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="6dp"
-                        android:text="$ 732.740"
+                        android:text="$ 503.821"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
                     <TextView
                         android:id="@+id/textView5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="-%10000"
-                        android:textAlignment="textEnd" />
+                        android:text="- % 41.69"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/red" />
 
                     <TextView
                         android:id="@+id/date1"
@@ -88,7 +89,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="6dp"
-                        android:text="Ropa Corporativa"
+                        android:text="Importación"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
                     <TextView
@@ -96,15 +97,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="6dp"
-                        android:text="$ 16.112.695"
+                        android:text="$ 12.000.032"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
                     <TextView
                         android:id="@+id/textVie"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="-%10000"
-                        android:textAlignment="textEnd" />
+                        android:text="- % 15.17"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/red" />
 
                     <TextView
                         android:id="@+id/date2"
@@ -144,15 +146,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="6dp"
-                        android:text="$ 8.421.455"
+                        android:text="$ 10.881.681"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
                     <TextView
                         android:id="@+id/textView576"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="-%10000"
-                        android:textAlignment="textEnd" />
+                        android:text="+ % 10.88"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/green" />
 
                     <TextView
                         android:id="@+id/date3"

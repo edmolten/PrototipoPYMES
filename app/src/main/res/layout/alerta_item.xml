@@ -5,12 +5,13 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    card_view:cardUseCompatPadding="true">
+    card_view:cardUseCompatPadding="true"
+    style="@style/CardViewStyle">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="6dp">
+        android:padding="12dp">
 
         <TextView
             android:id="@+id/nombre"
@@ -18,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/textView2"
+            android:layout_toStartOf="@+id/pcent"
             android:text="Producto"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 

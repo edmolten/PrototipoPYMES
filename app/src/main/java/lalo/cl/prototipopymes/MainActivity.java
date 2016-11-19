@@ -5,6 +5,8 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.NotificationManagerCompat;
@@ -20,7 +22,7 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    static int notificationId = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,15 +84,17 @@ public class MainActivity extends AppCompatActivity
 
     private void notificar(String titulo, String texto){
         NotificationCompat.Builder b = new NotificationCompat.Builder(this);
+        Uri uri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         b.setContentTitle(titulo).
                 setSmallIcon(R.mipmap.ic_launcher).
                 setLargeIcon(BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher)).
                 setContentText(texto).
                 addAction(R.drawable.ic_clock,"Ver luego", null).
-                addAction(R.drawable.ic_delete_black_24px,"Desechar",null);
+                addAction(R.drawable.ic_delete_black_24px,"Desechar",null).setSound(uri);
         NotificationManager mNotificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        mNotificationManager.notify(1, b.build());
+        mNotificationManager.notify(notificationId, b.build());
+        notificationId++;
     }
     public void generarAlerta(View v) {
         notificar("Alerta", "Ventas Bordado y Estampado - 10% respecto semana anterior");

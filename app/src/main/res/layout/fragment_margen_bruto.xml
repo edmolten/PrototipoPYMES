@@ -52,7 +52,7 @@
                 android:layout_alignBaseline="@+id/margen_Ventas"
                 android:layout_alignBottom="@+id/margen_Ventas"
                 android:layout_toEndOf="@+id/margen_Ventas"
-                android:text="$ 25.266.890"
+                android:text="$ 23.385.534"
                 android:textAlignment="textEnd"
                 android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
         </RelativeLayout>
@@ -87,16 +87,16 @@
                 android:layout_alignBottom="@+id/margenBruto"
                 android:layout_alignParentEnd="true"
                 android:layout_toEndOf="@+id/margenBruto"
-                android:text="$ 17.774.316"
+                android:text="$ 15.892.960"
                 android:textAlignment="textEnd"
                 android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
             <TextView
                 android:id="@+id/textView22"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="+ % 8,91"
+                android:text="- % 2,61"
                 android:textAlignment="textEnd"
-                android:textColor="@color/green"
+                android:textColor="@color/red"
                 android:layout_below="@+id/textView10" />
 
             <TextView
