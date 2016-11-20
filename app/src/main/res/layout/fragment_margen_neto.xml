@@ -105,7 +105,7 @@
                 android:layout_alignBottom="@+id/margenCostos2"
                 android:layout_alignParentEnd="true"
                 android:layout_toEndOf="@+id/margenCostos2"
-                android:text="- $ 14.910.805"
+                android:text="- $ 13.910.805"
                 android:textAlignment="textEnd"
                 android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
         </RelativeLayout>
@@ -139,7 +139,7 @@
                 android:layout_alignBottom="@+id/margenBruto"
                 android:layout_alignParentEnd="true"
                 android:layout_toEndOf="@+id/margenBruto"
-                android:text="$ 982.155"
+                android:text="$ 1.982.155"
                 android:textAlignment="textEnd"
                 android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium" />
 
@@ -147,7 +147,7 @@
                 android:id="@+id/textView22"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="- % 64.5"
+                android:text="- % 28,3"
                 android:textAlignment="textEnd"
                 android:textColor="@color/red"
                 android:layout_below="@+id/textView10" />

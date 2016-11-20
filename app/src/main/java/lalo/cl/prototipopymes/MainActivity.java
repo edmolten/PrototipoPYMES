@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity
         NotificationCompat.Builder b = new NotificationCompat.Builder(this);
         Uri uri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         b.setContentTitle(titulo).
-                setSmallIcon(R.mipmap.ic_launcher).
+                setSmallIcon(R.drawable.ic_icono_en_blanco).
                 setLargeIcon(BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher)).
                 setContentText(texto).
                 addAction(R.drawable.ic_clock,"Ver luego", null).

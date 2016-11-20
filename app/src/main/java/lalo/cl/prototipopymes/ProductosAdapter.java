@@ -71,15 +71,15 @@ public class ProductosAdapter implements ListAdapter {
 
         final Producto producto = productos.get(position);
         nombre.setText(producto.getNombre());
-        float pMi = (float) producto.getpMi();
-        float pComp = (float) producto.getpComp();
+        int pMi = producto.getpMi();
+        int pComp = producto.getpComp();
         p_mi.setText("$ " + String.valueOf(pMi));
         p_comp.setText("$" + String.valueOf(pComp));
         if (pMi > pComp) {
-            pcent.setText(String.format("%%%.1f mas caro", 100 * ((pMi - pComp) / pComp)));
+            pcent.setText(String.format("%%%.1f + caro", 100 * ((pMi*1.0 - pComp) / pComp)));
             pcent.setTextColor(activity.getResources().getColor(R.color.red));
         } else if (pMi < pComp) {
-            pcent.setText(String.format("%%%.1f mas barato", 100 * ((pComp - pMi) / pMi)));
+            pcent.setText(String.format("%%%.1f + barato", 100 * ((pComp*1.0 - pMi) / pMi)));
             pcent.setTextColor(activity.getResources().getColor(R.color.green));
         } else {
             pcent.setText("Mismo precio");

@@ -20,8 +20,8 @@ public class ProductosPeorFragment extends Fragment {
 
         ArrayList<Producto> productos = new ArrayList<>();
 
-        productos.add(new Producto("Margen Neto", "- % 64,5"));
-        productos.add(new Producto("Resultado Negocio", "- % 9,71"));
+        productos.add(new Producto("Margen Neto", "- % 28,3"));
+        productos.add(new Producto("Resultado Negocio", "- % 42,0"));
         productos.add(new Producto("Bordado y Estampado", "- % 41,69"));
         productos.add(new Producto("Importación", "- % 15,17"));
         adapter = new ProductosAlertasAdapter(inflater, productos, this);

@@ -74,7 +74,7 @@ public class NuevoEvento extends AppCompatActivity implements DatePickerDialog.O
         }
         else{
             ArrayList<Evento> e = new ArrayList<>();
-            e.add(new Evento(contacto,format.format(c.getTime()),descripcion));
+            e.add(new Evento(descripcion,format.format(c.getTime()),contacto));
             mapa.put(day,e);
         }
         finish();
